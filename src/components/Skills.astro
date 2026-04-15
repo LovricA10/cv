@@ -1,0 +1,96 @@
+---
+const skupineVjestina = [
+    {
+        naziv: "Programski jezici",
+        ikona: "/icons/code.svg",
+        vjestine: ["C++", "C#", "Java", "JavaScript"],
+    },
+    {
+        naziv: "Web tehnologije",
+        ikona: "/icons/web.svg",
+        vjestine: ["HTML", "CSS", "React"],
+    },
+    {
+        naziv: "Backend",
+        ikona: "/icons/backend.svg",
+        vjestine: ["Spring Boot", "REST API"],
+    },
+    {
+        naziv: "Baze podataka",
+        ikona: "/icons/database.svg",
+        vjestine: ["PostgreSQL", "SQL"],
+    },
+    {
+        naziv: "DevOps i alati",
+        ikona: "/icons/devops.svg",
+        vjestine: ["Docker", "Git", "GitHub", "Jira", "CI/CD"],
+    },
+    {
+        naziv: "Ostale vještine",
+        ikona: null,
+        vjestine: [
+            "Microsoft Office (Word, Excel, PowerPoint)",
+            "Rješavanje programskih problema",
+            "Osnove kibernetičke sigurnosti (certifikat)",
+            "Komunikacijske vještine",
+            "Vozačka dozvola B kategorije",
+        ],
+    },
+];
+---
+
+<section class="section">
+    <h2 class="section-title">
+        <img src="/icons/skills.svg" alt="" />
+        Vještine
+    </h2>
+
+    <div class="skills-grid">
+        {skupineVjestina.map((grupa) => (
+                <div class={`card skill-card ${!grupa.ikona ? 'full-width' : ''}`}>
+                    <h3 class="skill-group-title">
+                        {grupa.ikona && <img src={grupa.ikona} alt="" />}
+                        {grupa.naziv}
+                    </h3>
+                    <div class="badge-list">
+                        {grupa.vjestine.map((v) => (
+                                <span class="badge">{v}</span>
+                        ))}
+                    </div>
+                </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .full-width {
+        grid-column: 1 / -1;
+    }
+
+    .skill-group-title {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: 0.75rem;
+    }
+
+    .skill-group-title img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .badge-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+</style>

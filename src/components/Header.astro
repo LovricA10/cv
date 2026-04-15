@@ -1,0 +1,89 @@
+---
+---
+
+<header class="cv-header">
+    <div class="header-left">
+        <h1>Andrej Lovrić</h1>
+        <p class="tagline">Software Engineer</p>
+        <p class="location">
+            <img src="/icons/location.svg" alt="lokacija" />
+            Split, Hrvatska
+        </p>
+    </div>
+
+    <div class="header-right">
+        <a href="mailto:lovric.andrej5@gmail.com">
+            <img src="/icons/email.svg" alt="email" />
+            lovric.andrej5@gmail.com
+        </a>
+        <a href="https://github.com/LovricA10" target="_blank">
+            <img src="/icons/github.svg" alt="github" />
+            github.com/LovricA10
+        </a>
+    </div>
+</header>
+
+<style>
+    .cv-header {
+        background-color: var(--color-primary);
+        color: white;
+        padding: 2rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .header-left h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 0.25rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.85);
+        margin-bottom: 0.75rem;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.85);
+    }
+
+    .location img {
+        width: 16px;
+        height: 16px;
+        filter: brightness(0) invert(1);
+    }
+
+    .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.6rem;
+    }
+
+    .header-right a {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: white;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .header-right a:hover {
+        text-decoration: underline;
+    }
+
+    .header-right img {
+        width: 16px;
+        height: 16px;
+        filter: brightness(0) invert(1);
+    }
+</style>

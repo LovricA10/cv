@@ -1,0 +1,78 @@
+---
+const obrazovanje = [
+    {
+        naziv: "Programsko inženjerstvo",
+        ustanova: "Sveučilište Algebra Bernays",
+        lokacija: "Zagreb, Hrvatska",
+        period: "2023 – danas",
+    },
+    {
+        naziv: "Tehničar za računalstvo",
+        ustanova: "Elektrotehnička škola Split",
+        lokacija: "Split, Hrvatska",
+        period: "2019 – 2023",
+    },
+    {
+        naziv: "EDIT Code School",
+        ustanova: "EDIT Code School",
+        lokacija: "Split, Hrvatska",
+        period: "2020",
+    },
+];
+---
+
+<section class="section">
+    <h2 class="section-title">
+        <img src="/icons/education.svg" alt="" />
+        Obrazovanje
+    </h2>
+
+    <div class="edu-list">
+        {obrazovanje.map((item) => (
+                <div class="card edu-card">
+                    <div class="edu-header">
+                        <div>
+                            <h3 class="edu-naziv">{item.naziv}</h3>
+                            <a href="#" class="edu-ustanova">{item.ustanova}</a>
+                            <p class="edu-lokacija">{item.lokacija}</p>
+                        </div>
+                        <span class="period">{item.period}</span>
+                    </div>
+                </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .edu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .edu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .edu-naziv {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+    }
+
+    .edu-ustanova {
+        font-size: 0.9rem;
+        color: var(--color-primary);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 0.15rem;
+    }
+
+    .edu-lokacija {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+    }
+</style>
