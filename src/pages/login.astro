@@ -5,20 +5,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Login — Andrej Lovrić CV">
     <div class="login-wrapper">
         <div class="login-card">
-            <h1>Pristup CV-u</h1>
-            <p>Unesite pristupni kod za pregled CV-a.</p>
+            <h1>CV Access</h1>
+            <p>Enter the access code to view the CV.</p>
 
             <div class="input-group">
                 <input
                         type="password"
                         id="code-input"
-                        placeholder="Pristupni kod"
+                        placeholder="Access code"
                         autocomplete="off"
                 />
-                <button id="login-btn">Potvrdi</button>
+                <button id="login-btn">Confirm</button>
             </div>
 
-            <p id="error-msg" class="error hidden">Krivi kod. Pokušajte ponovo.</p>
+            <p id="error-msg" class="error hidden">Wrong code. Please try again.</p>
         </div>
     </div>
 </BaseLayout>
