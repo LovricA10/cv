@@ -8,15 +8,15 @@ const jezici = [
 <section class="section">
     <h2 class="section-title">
         <img src="/icons/languages.svg" alt="" />
-        Jezici
+        <span data-i18n="languages.title">Jezici</span>
     </h2>
 
     <div class="lang-grid">
-        {jezici.map((j) => (
-                <div class="card lang-card">
-                    <h3 class="lang-naziv">{j.naziv}</h3>
-                    <p class="lang-razina">{j.razina}</p>
-                </div>
+        {jezici.map((j, i) => (
+            <div class="card lang-card">
+                <h3 class="lang-naziv" data-i18n={`languages.items.${i}.name`}>{j.naziv}</h3>
+                <p class="lang-razina" data-i18n={`languages.items.${i}.level`}>{j.razina}</p>
+            </div>
         ))}
     </div>
 </section>

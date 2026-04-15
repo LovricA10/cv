@@ -1,0 +1,89 @@
+{
+  "header": {
+    "tagline": "Software Engineer",
+    "location": "Split, Hrvatska"
+  },
+  "about": {
+    "title": "O meni",
+    "text": "Student završne treće godine programskog inženjerstva na Sveučilištu Algebra Bernays. Tijekom stručne prakse radio sam sa Spring Bootom, PostgreSQL-om, Reactom i Dockerom te sudjelovao u deployment procesima. Upoznat sam s radom u agilnim timovima (Scrum, Kanban) i trenutno dodatno razvijam znanja u području servera, Nginx konfiguracije i web sigurnosti."
+  },
+  "work": {
+    "title": "Radno iskustvo",
+    "items": [
+      {
+        "role": "Stručna praksa",
+        "company": "MicroCache",
+        "period": "09/2025 – 05/2026",
+        "desc": "Tijekom prakse radio sam na razvoju web aplikacija i koristio se s modernim razvojnim alatima i procesima:",
+        "bullets": [
+          "Rad na frontend dijelu aplikacija koristeći React",
+          "Razvoj backend aplikacija koristeći Spring Boot",
+          "Rad s bazama podataka (PostgreSQL)",
+          "Korištenje Docker-a za kontejnerizaciju aplikacija",
+          "Sudjelovanje u deploy procesu i testiranju aplikacija",
+          "Upoznavanje s osnovama DevOps-a (CI/CD, serveri, deployment)",
+          "Rad u agilnom okruženju (Scrum, Kanban)",
+          "Korištenje alata Jira za praćenje zadataka"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Obrazovanje",
+    "items": [
+      {
+        "degree": "Programsko inženjerstvo",
+        "institution": "Sveučilište Algebra Bernays",
+        "location": "Zagreb, Hrvatska",
+        "period": "2023 – danas"
+      },
+      {
+        "degree": "Tehničar za računalstvo",
+        "institution": "Elektrotehnička škola Split",
+        "location": "Split, Hrvatska",
+        "period": "2019 – 2023"
+      },
+      {
+        "degree": "EDIT Code School",
+        "institution": "EDIT Code School",
+        "location": "Split, Hrvatska",
+        "period": "2020"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Vještine",
+    "groups": [
+      { "name": "Programski jezici" },
+      { "name": "Web tehnologije" },
+      { "name": "Backend" },
+      { "name": "Baze podataka" },
+      { "name": "DevOps i alati" },
+      { "name": "Ostale vještine" }
+    ],
+    "other": [
+      "Microsoft Office (Word, Excel, PowerPoint)",
+      "Rješavanje programskih problema",
+      "Osnove kibernetičke sigurnosti (certifikat)",
+      "Komunikacijske vještine",
+      "Vozačka dozvola B kategorije"
+    ]
+  },
+  "projects": {
+    "title": "Projekti",
+    "desc": "Tijekom studija radio sam na više projekata koji uključuju:",
+    "items": [
+      "Izrada web aplikacija (frontend + backend)",
+      "Razvoj desktop aplikacija u Javi i C#",
+      "Implementacija algoritama i struktura podataka u C++",
+      "Rad s bazama podataka i kompleksnim SQL upitima"
+    ]
+  },
+  "languages": {
+    "title": "Jezici",
+    "items": [
+      { "name": "Hrvatski", "level": "Maternji" },
+      { "name": "Engleski", "level": "Tečno" }
+    ]
+  }
+}

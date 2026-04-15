@@ -24,21 +24,21 @@ const obrazovanje = [
 <section class="section">
     <h2 class="section-title">
         <img src="/icons/education.svg" alt="" />
-        Obrazovanje
+        <span data-i18n="education.title">Obrazovanje</span>
     </h2>
 
     <div class="edu-list">
-        {obrazovanje.map((item) => (
-                <div class="card edu-card">
-                    <div class="edu-header">
-                        <div>
-                            <h3 class="edu-naziv">{item.naziv}</h3>
-                            <a href="#" class="edu-ustanova">{item.ustanova}</a>
-                            <p class="edu-lokacija">{item.lokacija}</p>
-                        </div>
-                        <span class="period">{item.period}</span>
+        {obrazovanje.map((item, i) => (
+            <div class="card edu-card">
+                <div class="edu-header">
+                    <div>
+                        <h3 class="edu-naziv" data-i18n={`education.items.${i}.degree`}>{item.naziv}</h3>
+                        <a href="#" class="edu-ustanova" data-i18n={`education.items.${i}.institution`}>{item.ustanova}</a>
+                        <p class="edu-lokacija" data-i18n={`education.items.${i}.location`}>{item.lokacija}</p>
                     </div>
+                    <span class="period" data-i18n={`education.items.${i}.period`}>{item.period}</span>
                 </div>
+            </div>
         ))}
     </div>
 </section>

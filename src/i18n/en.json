@@ -1,0 +1,89 @@
+{
+  "header": {
+    "tagline": "Software Engineer",
+    "location": "Split, Croatia"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "Final-year Software Engineering student at Algebra Bernays University. During my internship, I worked with Spring Boot, PostgreSQL, React, and Docker, and participated in deployment processes. I am familiar with working in agile teams (Scrum, Kanban) and am currently expanding my knowledge of servers, Nginx configuration, and web security."
+  },
+  "work": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "role": "Internship",
+        "company": "MicroCache",
+        "period": "09/2025 – 05/2026",
+        "desc": "During the internship, I worked on web application development using modern development tools and processes:",
+        "bullets": [
+          "Frontend development using React",
+          "Backend development using Spring Boot",
+          "Database work (PostgreSQL)",
+          "Using Docker for application containerization",
+          "Participating in deployment and testing processes",
+          "Introduction to DevOps fundamentals (CI/CD, servers, deployment)",
+          "Working in an agile environment (Scrum, Kanban)",
+          "Using Jira for task tracking"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "degree": "Software Engineering",
+        "institution": "Algebra Bernays University",
+        "location": "Zagreb, Croatia",
+        "period": "2023 – present"
+      },
+      {
+        "degree": "Computer Technician",
+        "institution": "Technical School Split",
+        "location": "Split, Croatia",
+        "period": "2019 – 2023"
+      },
+      {
+        "degree": "EDIT Code School",
+        "institution": "EDIT Code School",
+        "location": "Split, Croatia",
+        "period": "2020"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "groups": [
+      { "name": "Programming Languages" },
+      { "name": "Web Technologies" },
+      { "name": "Backend" },
+      { "name": "Databases" },
+      { "name": "DevOps & Tools" },
+      { "name": "Other Skills" }
+    ],
+    "other": [
+      "Microsoft Office (Word, Excel, PowerPoint)",
+      "Problem Solving",
+      "Cybersecurity Fundamentals (certificate)",
+      "Communication Skills",
+      "Driver's License (Category B)"
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "desc": "During my studies, I worked on several projects including:",
+    "items": [
+      "Building web applications (frontend + backend)",
+      "Desktop application development in Java and C#",
+      "Algorithm and data structure implementation in C++",
+      "Database work with complex SQL queries"
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      { "name": "Croatian", "level": "Native" },
+      { "name": "English", "level": "Fluent" }
+    ]
+  }
+}

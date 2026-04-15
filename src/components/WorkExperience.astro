@@ -1,35 +1,40 @@
 ---
+const bullets = [
+    "Rad na frontend dijelu aplikacija koristeći React",
+    "Razvoj backend aplikacija koristeći Spring Boot",
+    "Rad s bazama podataka (PostgreSQL)",
+    "Korištenje Docker-a za kontejnerizaciju aplikacija",
+    "Sudjelovanje u deploy procesu i testiranju aplikacija",
+    "Upoznavanje s osnovama DevOps-a (CI/CD, serveri, deployment)",
+    "Rad u agilnom okruženju (Scrum, Kanban)",
+    "Korištenje alata Jira za praćenje zadataka",
+];
 ---
 
 <section class="section">
     <h2 class="section-title">
         <img src="/icons/work.svg" alt="" />
-        Radno iskustvo
+        <span data-i18n="work.title">Radno iskustvo</span>
     </h2>
 
     <div class="card">
         <div class="card-header">
             <div>
-                <h3 class="job-title">Stručna praksa</h3>
-                <a href="#" class="company">MicroCache</a>
+                <h3 class="job-title" data-i18n="work.items.0.role">Stručna praksa</h3>
+                <a href="#" class="company" data-i18n="work.items.0.company">MicroCache</a>
             </div>
-            <span class="period">09/2025 – 05/2026</span>
+            <span class="period" data-i18n="work.items.0.period">09/2025 – 05/2026</span>
         </div>
 
-        <p class="card-desc">
+        <p class="card-desc" data-i18n="work.items.0.desc">
             Tijekom prakse radio sam na razvoju web aplikacija i koristio se s modernim
             razvojnim alatima i procesima:
         </p>
 
         <ul class="bullet-list">
-            <li>Rad na frontend dijelu aplikacija koristeći React</li>
-            <li>Razvoj backend aplikacija koristeći Spring Boot</li>
-            <li>Rad s bazama podataka (PostgreSQL)</li>
-            <li>Korištenje Docker-a za kontejnerizaciju aplikacija</li>
-            <li>Sudjelovanje u deploy procesu i testiranju aplikacija</li>
-            <li>Upoznavanje s osnovama DevOps-a (CI/CD, serveri, deployment)</li>
-            <li>Rad u agilnom okruženju (Scrum, Kanban)</li>
-            <li>Korištenje alata Jira za praćenje zadataka</li>
+            {bullets.map((bullet, i) => (
+                <li data-i18n={`work.items.0.bullets.${i}`}>{bullet}</li>
+            ))}
         </ul>
     </div>
 </section>

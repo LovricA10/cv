@@ -4,14 +4,18 @@
 <header class="cv-header">
     <div class="header-left">
         <h1>Andrej Lovrić</h1>
-        <p class="tagline">Software Engineer</p>
+        <p class="tagline" data-i18n="header.tagline">Software Engineer</p>
         <p class="location">
             <img src="/icons/location.svg" alt="lokacija" />
-            Split, Hrvatska
+            <span data-i18n="header.location">Split, Hrvatska</span>
         </p>
     </div>
 
     <div class="header-right">
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="hr">HR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <a href="mailto:lovric.andrej5@gmail.com">
             <img src="/icons/email.svg" alt="email" />
             lovric.andrej5@gmail.com
@@ -22,6 +26,26 @@
         </a>
     </div>
 </header>
+
+<script>
+    import { initI18n, setLang, getCurrentLang } from '../i18n/utils';
+
+    // Initialize on page load
+    initI18n();
+
+    // Set correct active button based on stored lang
+    document.querySelectorAll<HTMLElement>('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === getCurrentLang());
+    });
+
+    // Wire up buttons
+    document.querySelectorAll<HTMLElement>('.lang-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang') as 'hr' | 'en';
+            setLang(lang);
+        });
+    });
+</script>
 
 <style>
     .cv-header {
@@ -87,6 +111,35 @@
         filter: brightness(0) invert(1);
     }
 
+    .lang-switcher {
+        display: flex;
+        gap: 0.25rem;
+    }
+
+    .lang-btn {
+        padding: 0.2rem 0.55rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        border: 1.5px solid rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .lang-btn:hover {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .lang-btn.active {
+        background: white;
+        color: var(--color-primary);
+        border-color: white;
+    }
+
     @media (max-width: 600px) {
         .cv-header {
             flex-direction: column;
@@ -95,6 +148,10 @@
 
         .header-right {
             align-items: flex-start;
+        }
+
+        .lang-switcher {
+            margin-bottom: 0;
         }
     }
 </style>
