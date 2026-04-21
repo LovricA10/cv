@@ -1,9 +1,4 @@
 ---
-const cookie = Astro.cookies.get('cv_access');
-if (!cookie || cookie.value !== 'true') {
-    return Astro.redirect('/login');
-}
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import AboutMe from '../components/AboutMe.astro';
