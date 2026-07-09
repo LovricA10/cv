@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "O meni",
-    "text": "Student završne treće godine programskog inženjerstva na Sveučilištu Algebra Bernays. Tijekom stručne prakse radio sam sa Spring Bootom, PostgreSQL-om, Reactom i Dockerom te sudjelovao u deployment procesima. Upoznat sam s radom u agilnim timovima (Scrum, Kanban) i trenutno dodatno razvijam znanja u području servera, Nginx konfiguracije i web sigurnosti."
+    "text": "Prvostupnik inženjer računarstva (bacc. ing. comp.) s fokusom na backend razvoj i DevOps. Tijekom stručne prakse radio sam sa Spring Bootom, PostgreSQL-om, Reactom i Dockerom te sudjelovao u deployment procesima. Upoznat sam s radom u agilnim timovima (Scrum, Kanban), a trenutno dodatno razvijam znanja u području cloud infrastrukture, Nginx konfiguracije i web sigurnosti."
   },
   "work": {
     "title": "Radno iskustvo",
@@ -32,10 +32,10 @@
     "title": "Obrazovanje",
     "items": [
       {
-        "degree": "Programsko inženjerstvo",
+        "degree": "Prvostupnik inženjer računarstva",
         "institution": "Sveučilište Algebra Bernays",
         "location": "Zagreb, Hrvatska",
-        "period": "2023 – danas"
+        "period": "2023 – 2026"
       },
       {
         "degree": "Tehničar za računalstvo",

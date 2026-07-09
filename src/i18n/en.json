@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "About Me",
-    "text": "Final-year Software Engineering student at Algebra Bernays University. During my internship, I worked with Spring Boot, PostgreSQL, React, and Docker, and participated in deployment processes. I am familiar with working in agile teams (Scrum, Kanban) and am currently expanding my knowledge of servers, Nginx configuration, and web security."
+    "text": "Bachelor of Science in Computing (Bacc. ing. comp.) with a focus on backend development and DevOps. During my internship, I gained hands-on experience with Spring Boot, PostgreSQL, React, and Docker while participating in deployment processes. I am familiar with working in agile teams (Scrum, Kanban) and am currently expanding my knowledge of cloud infrastructure, Nginx configuration, and web security."
   },
   "work": {
     "title": "Work Experience",
@@ -32,10 +32,10 @@
     "title": "Education",
     "items": [
       {
-        "degree": "Software Engineering",
+        "degree": "Bachelor of Science in Computing",
         "institution": "Algebra Bernays University",
         "location": "Zagreb, Croatia",
-        "period": "2023 – present"
+        "period": "2023 – 2026"
       },
       {
         "degree": "Computer Technician",
