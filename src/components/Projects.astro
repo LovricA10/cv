@@ -1,32 +1,161 @@
 ---
-const stavke = [
-    "Izrada web aplikacija (frontend + backend)",
-    "Razvoj desktop aplikacija u Javi i C#",
-    "Implementacija algoritama i struktura podataka u C++",
-    "Rad s bazama podataka i kompleksnim SQL upitima",
+const projekti = [
+    {
+        naziv: "Sales Automation Lab",
+        ikona: "/icons/data.svg",
+        tehnologije: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "pandas", "Docker"],
+        opis: "REST API s JWT autentikacijom, uvozom CSV-a i izvještajima o prodaji. Slojevita arhitektura, idempotentan pandas ETL, testovi u CI-ju na SQLiteu i PostgreSQL-u.",
+        linkovi: [
+            { url: "https://github.com/LovricA10/sales-automation-lab" },
+        ],
+    },
+    {
+        naziv: "Realtime Hospitality System",
+        ikona: "/icons/backend.svg",
+        tehnologije: ["Java", "Spring Boot", "PostgreSQL", "WebSocket", "React", "TypeScript"],
+        opis: "Sustav za narudžbe u restoranu s ulogama administratora, osoblja i kuhinje te ažuriranjem narudžbi u stvarnom vremenu preko WebSocketa (STOMP). Spring Boot REST API s JWT autentikacijom i Flyway migracijama, web klijent u Reactu i TypeScriptu, testovi u GitHub Actions CI-ju.",
+        linkovi: [
+            { oznaka: "Backend", url: "https://github.com/LovricA10/realtime-hospitality-system" },
+            { oznaka: "Web", url: "https://github.com/LovricA10/realtime-hospitality-system-web" },
+        ],
+    },
+    {
+        naziv: "Information Systems Interoperability",
+        ikona: "/icons/web.svg",
+        tehnologije: ["Java", "Spring Boot", "REST", "SOAP", "GraphQL", "gRPC"],
+        opis: "Spring Boot servis za upravljanje tiketima podrške preko REST-a, SOAP-a i GraphQL-a, uz validaciju XML-a (XSD) i JSON Schema te JWT autentikaciju. Sadrži i gRPC servis za vremenske podatke iz DHMZ XML izvora.",
+        linkovi: [
+            { url: "https://github.com/LovricA10/information-systems-interoperability" },
+        ],
+    },
+    {
+        naziv: "WorldCupStatsApp",
+        ikona: "/icons/monitor.svg",
+        tehnologije: ["C#", ".NET 8", "WinForms", "WPF", "RestSharp"],
+        opis: "Desktop aplikacije (WinForms i WPF) za podatke sa Svjetskog prvenstva koje dijele biblioteku za čitanje podataka s REST API-ja ili iz lokalnih JSON datoteka. WinForms prikazuje omiljene igrače (drag and drop) i rang-liste po golovima, žutim kartonima i posjećenosti, a WPF početne postave utakmica.",
+        linkovi: [
+            { url: "https://github.com/LovricA10/WorldCupStatsApp" },
+        ],
+    },
+    {
+        naziv: "Sudoku JavaFX",
+        ikona: "/icons/grid.svg",
+        tehnologije: ["Java", "JavaFX", "Maven", "RMI", "XML"],
+        opis: "Sudoku igra za jednog ili dva igrača; stanje igre razmjenjuje se preko socketa, a chat preko RMI-ja. Spremanje i učitavanje igre, zapis poteza u XML za ponovni prikaz i generiranje HTML dokumentacije pomoću refleksije.",
+        linkovi: [
+            { url: "https://github.com/LovricA10/Sudoku-JavaFX" },
+        ],
+    },
 ];
 ---
 
-<section class="section">
+<section class="section section-box">
     <h2 class="section-title">
         <img src="/icons/projects.svg" alt="" />
         <span data-i18n="projects.title">Projekti</span>
     </h2>
 
-    <div class="card">
-        <p class="card-desc" data-i18n="projects.desc">Tijekom studija radio sam na više projekata koji uključuju:</p>
-        <ul class="bullet-list">
-            {stavke.map((item, i) => (
-                <li data-i18n={`projects.items.${i}`}>{item}</li>
-            ))}
-        </ul>
+    <div class="project-list">
+        {projekti.map((p, i) => (
+            <article class="project">
+                <span class="project-icon" aria-hidden="true">
+                    <img src={p.ikona} alt="" />
+                </span>
+                <div class="project-body">
+                    <h3 class="project-name" data-i18n={`projects.items.${i}.name`}>{p.naziv}</h3>
+                    <p class="project-tech">{p.tehnologije.join(" · ")}</p>
+                    <p class="project-desc" data-i18n={`projects.items.${i}.desc`}>{p.opis}</p>
+                    <div class="project-links">
+                        {p.linkovi.map((l) => (
+                            <a class="project-link" href={l.url} target="_blank" rel="noopener">
+                                <img src="/icons/github.svg" alt="" />
+                                {l.oznaka ?? l.url.replace("https://", "")}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </article>
+        ))}
     </div>
 </section>
 
 <style>
-    .card-desc {
-        font-size: 0.9rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.6;
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.35rem;
+    }
+
+    .project {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        break-inside: avoid;
+    }
+
+    /* Thin divider between cards so they stay separated on the tinted box */
+    .project + .project {
+        border-top: 1px solid var(--color-divider);
+        padding-top: 1.35rem;
+    }
+
+    .project-icon {
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: #ffffff;
+        border: 1px solid var(--color-divider);
+    }
+
+    .project-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .project-name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--color-text);
+    }
+
+    .project-tech {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-top: 0.15rem;
+    }
+
+    .project-desc {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: var(--color-text);
+        margin-top: 0.35rem;
+    }
+
+    .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1rem;
+        margin-top: 0.35rem;
+    }
+
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        overflow-wrap: anywhere;
+    }
+
+    .project-link img {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
     }
 </style>

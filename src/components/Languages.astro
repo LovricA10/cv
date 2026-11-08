@@ -11,32 +11,41 @@ const jezici = [
         <span data-i18n="languages.title">Jezici</span>
     </h2>
 
-    <div class="lang-grid">
+    <ul class="lang-list">
         {jezici.map((j, i) => (
-            <div class="card lang-card">
-                <h3 class="lang-naziv" data-i18n={`languages.items.${i}.name`}>{j.naziv}</h3>
-                <p class="lang-razina" data-i18n={`languages.items.${i}.level`}>{j.razina}</p>
-            </div>
+            <li class="lang-row">
+                <span class="lang-naziv" data-i18n={`languages.items.${i}.name`}>{j.naziv}</span>
+                <span class="lang-razina" data-i18n={`languages.items.${i}.level`}>{j.razina}</span>
+            </li>
         ))}
-    </div>
+    </ul>
 </section>
 
 <style>
-    .lang-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .lang-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+    }
+
+    .lang-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         gap: 1rem;
+        padding: 0.55rem 0.9rem;
+        border-radius: 10px;
+        background: var(--color-primary-tint);
     }
 
     .lang-naziv {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0.2rem;
+        font-size: 0.98rem;
+        font-weight: 700;
     }
 
     .lang-razina {
         font-size: 0.9rem;
+        font-weight: 600;
         color: var(--color-primary);
-        font-weight: 500;
     }
 </style>

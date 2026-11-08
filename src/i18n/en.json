@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "About Me",
-    "text": "Bachelor in applied computer engineering (Bacc. ing. comp.)\nComputer engineering graduate with a strong foundation in software development and an interest in embedded systems. Experienced in C++ and C#/.NET, and familiar with the fundamentals of digital electronics. During my internship, I worked with Spring Boot, PostgreSQL, React, and Docker in an agile team (Scrum, Kanban)."
+    "text": "Bachelor in applied computer engineering (Bacc. ing. comp.)\nSoftware engineering graduate focused on backend development. Experienced in Java (Spring Boot), C#/.NET and Python (FastAPI, SQLAlchemy, pandas). During my internship at MicroCache I worked on backend and frontend features with Spring Boot, React and PostgreSQL, containerized applications with Docker and worked in an agile team (Scrum, Kanban). I also build personal backend projects in Python with automated tests and CI."
   },
   "work": {
     "title": "Work Experience",
@@ -13,7 +13,7 @@
       {
         "role": "Internship",
         "company": "MicroCache",
-        "period": "09/2025 – 05/2026",
+        "period": "09/2025 - 05/2026",
         "desc": "During the internship, I worked on web application development using modern development tools and processes:",
         "bullets": [
           "Frontend development using React",
@@ -35,13 +35,13 @@
         "degree": "Software Engineering",
         "institution": "Algebra Bernays University",
         "location": "Zagreb, Croatia",
-        "period": "2023 – 2026"
+        "period": "2023 - 2026"
       },
       {
         "degree": "Computer Technician",
         "institution": "Technical School Split",
         "location": "Split, Croatia",
-        "period": "2019 – 2023"
+        "period": "2019 - 2023"
       },
       {
         "degree": "EDIT Code School",
@@ -59,6 +59,7 @@
       { "name": "Backend" },
       { "name": "Databases" },
       { "name": "DevOps & Tools" },
+      { "name": "Data & Testing" },
       { "name": "Other Skills" }
     ],
     "other": [
@@ -71,12 +72,35 @@
   },
   "projects": {
     "title": "Projects",
-    "desc": "During my studies, I worked on several projects including:",
     "items": [
-      "Building web applications (frontend + backend)",
-      "Desktop application development in Java and C#",
-      "Algorithm and data structure implementation in C++",
-      "Database work with complex SQL queries"
+      {
+        "name": "Sales Automation Lab",
+        "desc": "REST API with JWT auth, CSV import and sales reports. Layered architecture, idempotent pandas ETL, tests in CI against SQLite and PostgreSQL."
+      },
+      {
+        "name": "Realtime Hospitality System",
+        "desc": "Restaurant ordering system with admin, staff and kitchen roles and real-time order updates over WebSocket (STOMP). Spring Boot REST API with JWT auth and Flyway migrations, React and TypeScript web client, tests in GitHub Actions CI."
+      },
+      {
+        "name": "Information Systems Interoperability",
+        "desc": "Spring Boot service for managing support tickets over REST, SOAP and GraphQL, with XML (XSD) and JSON Schema validation and JWT auth. Also includes a gRPC service for weather data from the DHMZ XML feed."
+      },
+      {
+        "name": "WorldCupStatsApp",
+        "desc": "Desktop apps (WinForms and WPF) for World Cup data that share a library for reading data from a REST API or local JSON files. WinForms shows favorite players (drag and drop) and rankings by goals, yellow cards and attendance; WPF shows match starting lineups."
+      },
+      {
+        "name": "Sudoku JavaFX",
+        "desc": "Sudoku game for one or two players; game state is exchanged over sockets and chat runs over RMI. Saving and loading games, recording moves to XML for replay and generating HTML documentation with reflection."
+      }
+    ]
+  },
+  "profile": {
+    "title": "Profile",
+    "items": [
+      "Focused on backend development and practical, well-tested solutions.",
+      "Enjoys teamwork and agile practices.",
+      "Continuously learning, currently deepening Python and software architecture."
     ]
   },
   "languages": {

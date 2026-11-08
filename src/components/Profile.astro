@@ -1,0 +1,20 @@
+---
+const stavke = [
+    "Usmjeren na backend razvoj i praktična, dobro testirana rješenja.",
+    "Rado radim u timu i prema agilnim praksama.",
+    "Kontinuirano učim, trenutno produbljujem Python i softversku arhitekturu.",
+];
+---
+
+<section class="section">
+    <h2 class="section-title">
+        <img src="/icons/about.svg" alt="" />
+        <span data-i18n="profile.title">Profil</span>
+    </h2>
+
+    <ul class="check-list">
+        {stavke.map((s, i) => (
+            <li data-i18n={`profile.items.${i}`}>{s}</li>
+        ))}
+    </ul>
+</section>

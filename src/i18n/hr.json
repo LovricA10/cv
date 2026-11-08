@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "O meni",
-    "text": "Prvostupnik inženjer računarstva (bacc. ing. comp.)\nInženjer računarstva sa snažnim temeljima u razvoju softvera i interesom za ugradbene sustave. Iskustvo u C++ i C#/.NET-u te poznavanje osnova digitalne elektronike. Tijekom stručne prakse radio sam sa Spring Bootom, PostgreSQL-om, Reactom i Dockerom u agilnom timu (Scrum, Kanban)."
+    "text": "Prvostupnik inženjer računarstva (bacc. ing. comp.)\nPrvostupnik računarstva usmjeren na backend razvoj. Iskustvo s Javom (Spring Boot), C#/.NET-om i Pythonom (FastAPI, SQLAlchemy, pandas). Tijekom prakse u MicroCacheu radio sam na backend i frontend funkcionalnostima sa Spring Bootom, Reactom i PostgreSQL-om, kontejnerizirao aplikacije Dockerom i radio u agilnom timu (Scrum, Kanban). Izrađujem i osobne backend projekte u Pythonu s automatiziranim testovima i CI-jem."
   },
   "work": {
     "title": "Radno iskustvo",
@@ -13,7 +13,7 @@
       {
         "role": "Stručna praksa",
         "company": "MicroCache",
-        "period": "09/2025 – 05/2026",
+        "period": "09/2025 - 05/2026",
         "desc": "Tijekom prakse radio sam na razvoju web aplikacija i koristio se s modernim razvojnim alatima i procesima:",
         "bullets": [
           "Rad na frontend dijelu aplikacija koristeći React",
@@ -35,13 +35,13 @@
         "degree": "Programsko inženjerstvo",
         "institution": "Sveučilište Algebra Bernays",
         "location": "Zagreb, Hrvatska",
-        "period": "2023 – 2026"
+        "period": "2023 - 2026"
       },
       {
         "degree": "Tehničar za računalstvo",
         "institution": "Elektrotehnička škola Split",
         "location": "Split, Hrvatska",
-        "period": "2019 – 2023"
+        "period": "2019 - 2023"
       },
       {
         "degree": "EDIT Code School",
@@ -59,6 +59,7 @@
       { "name": "Backend" },
       { "name": "Baze podataka" },
       { "name": "DevOps i alati" },
+      { "name": "Podaci i testiranje" },
       { "name": "Ostale vještine" }
     ],
     "other": [
@@ -71,12 +72,35 @@
   },
   "projects": {
     "title": "Projekti",
-    "desc": "Tijekom studija radio sam na više projekata koji uključuju:",
     "items": [
-      "Izrada web aplikacija (frontend + backend)",
-      "Razvoj desktop aplikacija u Javi i C#",
-      "Implementacija algoritama i struktura podataka u C++",
-      "Rad s bazama podataka i kompleksnim SQL upitima"
+      {
+        "name": "Sales Automation Lab",
+        "desc": "REST API s JWT autentikacijom, uvozom CSV-a i izvještajima o prodaji. Slojevita arhitektura, idempotentan pandas ETL, testovi u CI-ju na SQLiteu i PostgreSQL-u."
+      },
+      {
+        "name": "Realtime Hospitality System",
+        "desc": "Sustav za narudžbe u restoranu s ulogama administratora, osoblja i kuhinje te ažuriranjem narudžbi u stvarnom vremenu preko WebSocketa (STOMP). Spring Boot REST API s JWT autentikacijom i Flyway migracijama, web klijent u Reactu i TypeScriptu, testovi u GitHub Actions CI-ju."
+      },
+      {
+        "name": "Information Systems Interoperability",
+        "desc": "Spring Boot servis za upravljanje tiketima podrške preko REST-a, SOAP-a i GraphQL-a, uz validaciju XML-a (XSD) i JSON Schema te JWT autentikaciju. Sadrži i gRPC servis za vremenske podatke iz DHMZ XML izvora."
+      },
+      {
+        "name": "WorldCupStatsApp",
+        "desc": "Desktop aplikacije (WinForms i WPF) za podatke sa Svjetskog prvenstva koje dijele biblioteku za čitanje podataka s REST API-ja ili iz lokalnih JSON datoteka. WinForms prikazuje omiljene igrače (drag and drop) i rang-liste po golovima, žutim kartonima i posjećenosti, a WPF početne postave utakmica."
+      },
+      {
+        "name": "Sudoku JavaFX",
+        "desc": "Sudoku igra za jednog ili dva igrača; stanje igre razmjenjuje se preko socketa, a chat preko RMI-ja. Spremanje i učitavanje igre, zapis poteza u XML za ponovni prikaz i generiranje HTML dokumentacije pomoću refleksije."
+      }
+    ]
+  },
+  "profile": {
+    "title": "Profil",
+    "items": [
+      "Usmjeren na backend razvoj i praktična, dobro testirana rješenja.",
+      "Rado radim u timu i prema agilnim praksama.",
+      "Kontinuirano učim, trenutno produbljujem Python i softversku arhitekturu."
     ]
   },
   "languages": {

@@ -11,59 +11,41 @@ const bullets = [
 ];
 ---
 
-<section class="section">
+<section class="section section-box">
     <h2 class="section-title">
         <img src="/icons/work.svg" alt="" />
         <span data-i18n="work.title">Radno iskustvo</span>
     </h2>
 
-    <div class="card">
-        <div class="card-header">
-            <div>
-                <h3 class="job-title" data-i18n="work.items.0.role">Stručna praksa</h3>
-                <a href="#" class="company" data-i18n="work.items.0.company">MicroCache</a>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <h3 class="item-title" data-i18n="work.items.0.role">Stručna praksa</h3>
+                    <span class="item-subtitle" data-i18n="work.items.0.company">MicroCache</span>
+                </div>
+                <span class="period" data-i18n="work.items.0.period">09/2025 - 05/2026</span>
             </div>
-            <span class="period" data-i18n="work.items.0.period">09/2025 – 05/2026</span>
+
+            <p class="work-desc" data-i18n="work.items.0.desc">
+                Tijekom prakse radio sam na razvoju web aplikacija i koristio se s modernim
+                razvojnim alatima i procesima:
+            </p>
+
+            <ul class="bullet-list">
+                {bullets.map((bullet, i) => (
+                    <li data-i18n={`work.items.0.bullets.${i}`}>{bullet}</li>
+                ))}
+            </ul>
         </div>
-
-        <p class="card-desc" data-i18n="work.items.0.desc">
-            Tijekom prakse radio sam na razvoju web aplikacija i koristio se s modernim
-            razvojnim alatima i procesima:
-        </p>
-
-        <ul class="bullet-list">
-            {bullets.map((bullet, i) => (
-                <li data-i18n={`work.items.0.bullets.${i}`}>{bullet}</li>
-            ))}
-        </ul>
     </div>
 </section>
 
 <style>
-    .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 0.75rem;
-        gap: 1rem;
-    }
-
-    .job-title {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0.2rem;
-    }
-
-    .company {
-        font-size: 0.9rem;
-        color: var(--color-primary);
-        font-weight: 500;
-    }
-
-    .card-desc {
-        font-size: 0.9rem;
-        margin-bottom: 0.75rem;
-        color: var(--color-text);
+    .work-desc {
+        font-size: 0.95rem;
         line-height: 1.6;
+        color: var(--color-text-muted);
+        margin: 0.85rem 0 0.75rem;
     }
 </style>

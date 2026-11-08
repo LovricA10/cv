@@ -1,20 +1,83 @@
 ---
 ---
 
-<section class="section">
-    <h2 class="section-title">
-        <img src="/icons/about.svg" alt="" />
-        <span data-i18n="about.title">O meni</span>
-    </h2>
-
-    <p class="about-text" data-i18n="about.text">{"Prvostupnik inženjer računarstva (bacc. ing. comp.)\nInženjer računarstva sa snažnim temeljima u razvoju softvera i interesom za ugradbene sustave. Iskustvo u C++ i C#/.NET-u te poznavanje osnova digitalne elektronike. Tijekom stručne prakse radio sam sa Spring Bootom, PostgreSQL-om, Reactom i Dockerom u agilnom timu (Scrum, Kanban)."}</p>
+<section class="about-box">
+    <div class="about-icon" aria-hidden="true">
+        <img src="/icons/code.svg" alt="" />
+    </div>
+    <div class="about-body">
+        <h2 class="about-title" data-i18n="about.title">O meni</h2>
+        <p class="about-text" data-i18n="about.text">{"Prvostupnik inženjer računarstva (bacc. ing. comp.)\nPrvostupnik računarstva usmjeren na backend razvoj. Iskustvo s Javom (Spring Boot), C#/.NET-om i Pythonom (FastAPI, SQLAlchemy, pandas). Tijekom prakse u MicroCacheu radio sam na backend i frontend funkcionalnostima sa Spring Bootom, Reactom i PostgreSQL-om, kontejnerizirao aplikacije Dockerom i radio u agilnom timu (Scrum, Kanban). Izrađujem i osobne backend projekte u Pythonu s automatiziranim testovima i CI-jem."}</p>
+    </div>
 </section>
 
 <style>
+    .about-box {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2.25rem;
+        padding: 1.5rem 1.75rem;
+        background: #ffffff;
+        border: 1px solid var(--color-divider);
+        border-radius: 16px;
+        break-inside: avoid;
+    }
+
+    .about-icon {
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: var(--color-primary);
+    }
+
+    .about-icon img {
+        width: 28px;
+        height: 28px;
+        filter: brightness(0) invert(1);
+    }
+
+    .about-body {
+        border-left: 2px solid var(--color-line);
+        padding-left: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        margin-bottom: 0.35rem;
+    }
+
     .about-text {
-        font-size: 0.95rem;
-        line-height: 1.7;
+        font-size: 0.98rem;
+        line-height: 1.65;
         color: var(--color-text);
         white-space: pre-line;
+        text-align: justify;
+    }
+
+    @media screen and (max-width: 600px) {
+        .about-box {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+        }
+
+        .about-icon {
+            width: 46px;
+            height: 46px;
+        }
+
+        .about-body {
+            border-left: none;
+            padding-left: 0;
+        }
     }
 </style>

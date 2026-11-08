@@ -7,16 +7,26 @@ import Education from '../components/Education.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
 import Languages from '../components/Languages.astro';
+import Profile from '../components/Profile.astro';
 ---
 
-<BaseLayout title="Andrej Lovrić — CV">
-    <Header />
-    <div class="cv-wrapper">
+<BaseLayout title="Andrej Lovrić - CV">
+    <main class="page">
+        <div class="page-deco" aria-hidden="true"></div>
+        <Header />
         <AboutMe />
-        <WorkExperience />
-        <Education />
-        <Skills />
-        <Projects />
-        <Languages />
-    </div>
+        <div class="columns">
+            <div class="col col-main">
+                <WorkExperience />
+                <Projects />
+            </div>
+            <aside class="col col-side">
+                <Education />
+                <Skills part="tech" />
+                <Languages />
+                <Skills part="other" />
+                <Profile />
+            </aside>
+        </div>
+    </main>
 </BaseLayout>
