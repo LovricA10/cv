@@ -106,7 +106,7 @@
   "languages": {
     "title": "Jezici",
     "items": [
-      { "name": "Hrvatski", "level": "Maternji" },
+      { "name": "Hrvatski", "level": "Materinji" },
       { "name": "Engleski", "level": "Tečno" }
     ]
   }
